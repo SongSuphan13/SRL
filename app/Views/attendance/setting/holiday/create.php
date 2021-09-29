@@ -10,7 +10,6 @@
     $db = db_connect();
     $r_main =  $db->table('aut_menu')->select('menu_id,menu_name_th,parent_id')->where('menu_id',$menuCode)->get()->getRowArray();
 
-    
     $session = session();
     $arr_menu = $session->get('user_menu');
     $user_displaymenu = $session->get('user_displaymenu');
